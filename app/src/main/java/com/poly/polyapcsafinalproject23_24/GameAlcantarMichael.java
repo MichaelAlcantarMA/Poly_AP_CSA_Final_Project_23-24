@@ -2,12 +2,18 @@ package com.poly.polyapcsafinalproject23_24;
 
 
 import android.view.View;
+import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 public class GameMichaelAlcantar extends GameActivity{
 
     //instance variables
     //   variables you plan to use throughout the adventure
-    private Scanner scan;
+    private TextView tvTitle, tvSubtitle, tvStoryText;
+    private ImageView ivStory;
+    private Button btn1, btn2, btn3, btn4;
+    private boolean isWon;
     private int numLives;
     //private Player player; (optional)
 
@@ -17,7 +23,7 @@ public class GameMichaelAlcantar extends GameActivity{
         //initialize number of lives
         numLives = 1;
         //create a scanner object for user input
-        scan = new Scanner(System.in);
+
 
         //create a player object (optional)
         //player = new Player(...)
@@ -27,15 +33,31 @@ public class GameMichaelAlcantar extends GameActivity{
         System.out.println("You wake up due the loud banging outside of your log cabin");
 
         start();
+
     }
 
-    @Overrride
-    protected void run()
 
     @Override
-    public void setContentView() {
-        R.layout.activity_game_3_button
-    }) {
+    protected void run() {
+    setContentView(R.layout.activity_game_3_button);
+
+        tvTitle = findViewById(R.id.tv_title_txt);
+        tvSubtitle = findViewById(R.id.tv_subtitle);
+        tvStoryText = findViewById(R.id.tv_story);
+        ivStory = findViewById(R.id.iv_story);
+        btn1 = findViewById(R.id.btn_1);
+        btn2 = findViewById(R.id.btn_2);
+        btn3 = findViewById(R.id.btn_3);
+
+        tvTitle.setText("Loney Cabin");
+        tvSubtitle.setText("In the Woods");
+    }
+
+    private void setAllBtnsVisible()
+    {
+        btn1.setVisibility(View.VISIBLE);
+        btn2.setVisibility(View.VISIBLE);
+        btn3.setVisibility(View.VISIBLE);
     }
 
     private void start()
