@@ -1,6 +1,7 @@
 package com.poly.polyapcsafinalproject23_24;
 
 
+import android.annotation.SuppressLint;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -60,57 +61,82 @@ public class GameMichaelAlcantar extends GameActivity{
         btn3.setVisibility(View.VISIBLE);
     }
 
+
     private void start()
     {
-        //start adventure here
-        System.out.println("1. Play like its fnaf and go through cameras\n2. Go to the basement and hide.\n3. Call the cops");
+        isWon = false;
 
-        if (choice == 1)
-        {
-            fnafCams();
-        }
-        else if (choice == 2)
-        {
-            basement();
-        }
-        else if (choice == 3)
-        {
-            cops();
-        }
+        tvStoryText.setText("What would you do?");
+
+        setAllBtnsVisible();
+        btn1.setText("Play like its fnaf and go through cameras.");
+        btn2.setText("Go to the basement and hide.");
+        btn3.setText("Call the cops.");
+        btn4.setVisibility(View.INVISIBLE);
+
+
+        btn1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(VIEW v) { fnafCams(); }
+        });
+
+        btn2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(VIEW v) {basement();}
+        });
+
+        btn3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(VIEW v) { cops(); }
+        });
+
     }
 
     private void cops()
     {
-        System.out.println("You called the cops and said they are on the way");
-        System.out.println("Now you need to wait ");
+        tvStoryText.setText("You called the cops and said they are on the way, Now you just need to wait")
         System.out.println("1. Hold the front lines\n2. Hide till help arrives. ");
 
+        setAllBtnsVisible();
+        btn1.setText("Hold the front lines");
+        btn2.setText("Hide till help arrives");
+        btn3.setVisibility(View.INVISIBLE);
+        btn4.setVisibility(View.INVISIBLE);
 
-        if (choice == 1)
-        {
-            war();
-        }
-        else if (choice == 2)
-        {
-            help();
-        }
+        btn1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(VIEW v) { war(); }
+        });
+
+        btn2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(VIEW v) { help(); }
+        });
     }
 
     private void help()
     {
-        System.out.println("You hide till the police arrives");
-        System.out.println("You later hear gunfire outside your home");
-        System.out.println("You want to help them but how");
+
+        tvStoryText.setText("You hide till the police arrives.You later hear gunfire right outside your home, you wanna helpthem but how?");
+
         System.out.println("1. Fire at the monster with your firearms\n2. Use a loud radio distract it ");
 
-        if (choice == 1)
-        {
-            fireArms();
-        }
-        else if (choice == 2)
-        {
-            radio();
-        }
+        setAllBtnsVisible();
+        btn1.setText("Fire ar the monster with your firearm.");
+        btn2.setText("Use a loud radio to distract it.");
+        btn3.setVisibility(View.INVISIBLE);
+        btn4.setVisibility(View.INVISIBLE);
+
+        btn1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) { fireArms();}
+        });
+
+        btn2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(VIEW v) { radio(); }
+        });
+
     }
 
     private void radio()
@@ -118,7 +144,8 @@ public class GameMichaelAlcantar extends GameActivity{
 
         System.out.println("You managed to distract the monster but all of its focused is on you now ");
         System.out.println("The beast has found its way to you and threw you out of the window injuried you. ");
-        System.out.println("The police force is there to help you getting you back up but later fleeing from the monster ");    System.out.println("You were forced to leave your home but still alive");
+        System.out.println("The police force is there to help you getting you back up but later fleeing from the monster ");
+        System.out.println("You were forced to leave your home but still alive");
 
         dub();
     }
