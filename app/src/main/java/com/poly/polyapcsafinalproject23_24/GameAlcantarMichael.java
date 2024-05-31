@@ -141,11 +141,10 @@ public class GameMichaelAlcantar extends GameActivity{
 
     private void radio()
     {
-
-        System.out.println("You managed to distract the monster but all of its focused is on you now ");
-        System.out.println("The beast has found its way to you and threw you out of the window injuried you. ");
-        System.out.println("The police force is there to help you getting you back up but later fleeing from the monster ");
-        System.out.println("You were forced to leave your home but still alive");
+        tvStoryText.setText("You managed to distract the monster but all of its focused is on you now");
+        tvStoryText.setText("The beast has found its way to you ad threw you out of the window injuring you");
+        tvStoryText.setText("The police force is there to help you get back up but later flee from the monster");
+        tvStoryText.setText("Tou were force to leave your home but in the end you are still alive");
 
         dub();
     }
@@ -153,6 +152,13 @@ public class GameMichaelAlcantar extends GameActivity{
 
     private void fireArms()
     {
+
+        tvStoryText.setText("As the craeture is been weaken by the police");
+        tvStoryText.setText("You join the fight");
+        tvStoryText.setText("the police threw molotovs at the beast then t");
+        tvStoryText.setText("");
+
+
 
         System.out.println("As the creature is been weakend by police.");
         System.out.println("You join the fight ");
@@ -164,8 +170,13 @@ public class GameMichaelAlcantar extends GameActivity{
 
     private void war()
     {
+        tvStoryText.setText("You decide to arm yourself and search for the creature");
+        tvStoryText.setText("You check the front door");
+        tvStoryText.setText("But then the creature jumps you,but before killing you off a helicopter arrives and guns the creature down");
+        tvStoryText.setText("One of the men in the helicopter yells fire is it weakness");
 
-        System.out.println("You decide to arm yourself and search for the creature ");
+
+        System.out.println("You decide to arm yourself and search for the creature");
         System.out.println("You check the front door ");
         System.out.println("But then the creature jumps you,but before killing you off a helicopter arrives and guns the creature down ");
         System.out.println("One of the men in the helicopter yells fire is it weakness ");
@@ -184,30 +195,29 @@ public class GameMichaelAlcantar extends GameActivity{
 
     private void useFire()
     {
-
-        System.out.println("You throw the canister at the monster");
-        System.out.println("The canister hits the monster and kills it saving you ");
-        System.out.println("The cops later tell you not say anything about the monster because its a goverment secret");
-        System.out.println("");
+        tvStoryText.setText("You throw the canister at the monster");
+        tvStoryText.setText("The canister hits the monster and kills it saving you");
+        tvStoryText.setText("The cops later tell you not say anything about the monster because its a goverment secret");
+        tvStoryText.setText("");
 
         dub();
     }
     private void useFlamer()
     {
+        tvStoryText.setText("You use the flamethrower on the creature");
+        tvStoryText.setText("The fire kills the monster and you survived");
+        tvStoryText.setText("The cops later arrested you for owning a illegal firearm and will be take to a federal prison");
 
-        System.out.println("You use the flamethrower on the creature");
-        System.out.println("The fire kills the monster and you survived");
-        System.out.println("The cops later arrested you for owning a illegal firearm and will be take to a federal prison");
-        System.out.println("");
 
         dub();
     }
 
     private void basement()
     {
+        tvStoryText.setText("You run to the basement and hide behind somecrates");
+        tvStoryText.setText("The animal breaches the basement and looks around ");
+        tvStoryText.setText("");
 
-        System.out.println("You run to the basement and hide behind somecrates");
-        System.out.println("The animal breaches the basement and looks around ");
         System.out.println("1. Stare at the animal\2. cover your head and hold your breath. ");
 
 
@@ -224,20 +234,18 @@ public class GameMichaelAlcantar extends GameActivity{
 
     private void holdBreath()
     {
-
-        System.out.println("You held your breath and hide behind cover");
-        System.out.println("The beast soons leaves the basement, it completely left the house you are safe");
-
-        System.out.println("");
+        tvStoryText.setText("You held your breath and hide behind cover");
+        tvStoryText.setText("The beast soons leaves the basement, it completely left the house you are safe");
 
         dub();
     }
 
     private void stare()
     {
+        tvStoryText.setText("You stare the the beast");
+        tvStoryText.setText("The beast spots you and runs at your direction");
+        tvStoryText.setText("");
 
-        System.out.println("You stare the the beast ");
-        System.out.println("The beast spots you and runs at your direction ");
         System.out.println("1. Get into cover\2. Jump over the beast and run for it. ");
 
 
@@ -254,25 +262,23 @@ public class GameMichaelAlcantar extends GameActivity{
 
     private void cover()
     {
-
-        System.out.println("You tried to hide but its too late he found you");
+        tvStoryText.setText("You tried to hide but its too late he found you");
 
         defeat();
     }
 
     private void jump()
     {
-
-        System.out.println("You succefuly jump over the beast");
-        System.out.println("But sadly you are not faster than it, it catches up to you and grabs you from behind");
+        tvStoryText.setText("You succefuly jump over the beast");
+        tvStoryText.setText("But sadly you are not faster than it, it catches up to you and grabs you from behind");
 
         defeat();
     }
 
     private void fnafCams()
     {
+        tvStoryText.setText("You check the cameras but see a tall figure with a deer head");
 
-        System.out.println("You check the cameras but see a tall figure with a deer head");
 
         System.out.println("1. Get a gun then go investigate.\n2. Stay in you room");
 
@@ -289,8 +295,8 @@ public class GameMichaelAlcantar extends GameActivity{
 
     private void stayRoom()
     {
+        tvStoryText.setText("As you are freaking out you have two options");
 
-        System.out.println("As you are freaking out you have two options ");
         System.out.println("1. Hide in the room and stay quiet and pray that the creature will go away\n2. Or look for your unregisterd flamethrower you hid from the goverment");
 
 
@@ -307,8 +313,8 @@ public class GameMichaelAlcantar extends GameActivity{
 
     private void hideroom()
     {
+        tvStoryText.setText("As you are searching for way to hide, you have two chooses");
 
-        System.out.println("As you are searching for way to hide, you have two chooses ");
         System.out.println("1. Under the bed\n2. Closet");
 
 
@@ -324,27 +330,26 @@ public class GameMichaelAlcantar extends GameActivity{
 
     private void closet()
     {
-
-        System.out.println("You quickly hide in the closet, moments later the beast runs into the room ");
-        System.out.println(" The creature looks around and runs directly towards you, dragging you out then killing you  ");
+        tvStoryText.setText("You quickly hide in the closet, moments later the beast runs into the room");
+        tvStoryText.setText(" The creature looks around and runs directly towards you, dragging you out then killing you");
 
         defeat();
     }
 
     private void hidebed()
     {
-
-        System.out.println(" You quickly hid under the bed, you hear loud foot steps appoaching ");
-        System.out.println(" The feral beast barges into the room, it quickly targest the closet destroying it, the beast later leaves home and disappear");
-        System.out.println(" You survive the night");
+        tvStoryText.setText("You quickly hid under the bed, you hear loud foot steps appoaching");
+        tvStoryText.setText("The feral beast barges into the room, it quickly targest the closet destroying it, the beast later leaves home and disappear");
+        tvStoryText.setText("You survive the night");
 
         dub();
     }
 
     private void betterPryo()
     {
-        System.out.println("As you walk towards the front door exited to use the flamethrower ");
-        System.out.println("The beast brustes into the front door  ");
+        tvStoryText.setText("As you walk towards the front door exited to use the flamethrower");
+        tvStoryText.setText("The beast brustes into the front door");
+
         System.out.println("1. Use the flamethrower\n2. RUN AS FAST AS YOU CAN");
 
 
@@ -360,23 +365,24 @@ public class GameMichaelAlcantar extends GameActivity{
     }
     private void freeze()
     {
-        System.out.println("You get too terrified of fighting the creature you frozed ");
-        System.out.println("The creature tackles you down instantly killing you  ");
+        tvStoryText.setText("You get too terrified of fighting the creature you frozed");
+        tvStoryText.setText("The creature tackles you down instantly killing you");
 
         defeat();
     }
 
     private void burn()
     {
-        System.out.println("You spray down the giant beast  ");
-        System.out.println("It screams in pain running out of the house while set on fire, killing it ");
+        tvStoryText.setText("You spray down the giant beast");
+        tvStoryText.setText("It screams in pain running out of the house while set on fire, killing it");
 
         dub();
     }
 
     private void gunInvestigate()
     {
-        System.out.println("You are about to leave the cabin but you hear a loud terrifying screech");
+        tvStoryText.setText("You are about to leave the cabin but you hear a loud terrifying screech");
+
         System.out.println(TextColor.RED + " RAEEETETETETE!" + TextColor.RESET);
         System.out.println("1. Choose to still go out side\n2. Remain inside");
 
@@ -391,7 +397,8 @@ public class GameMichaelAlcantar extends GameActivity{
 
     private void gunOutside()
     {
-        System.out.println("You run outside aiming your gun and see nothing, you look cautiously but see nothing. As you look into the distance you see 2 red dots coming torwards you.");
+        tvStoryText.setText("You run outside aiming your gun and see nothing, you look cautiously but see nothing. As you look into the distance you see 2 red dots coming torwards you");
+
         System.out.println("1. Fire your gun at it \n2. RUN INSIDE");
 
 
@@ -407,8 +414,8 @@ public class GameMichaelAlcantar extends GameActivity{
 
     private void fireGun()
     {
-        System.out.println("As you fire your gun it does nothing to the beast.");
-        System.out.println("As the beast got closer you run out of bullets the creature runs up to you, picks you up and slam you to the ground.");
+        tvStoryText.setText("As you fire your gun it does nothing to the beast");
+        tvStoryText.setText("As the beast got closer you run out of bullets the creature runs up to you, picks you up and slam you to the ground");
 
         defeat();
 
@@ -417,8 +424,9 @@ public class GameMichaelAlcantar extends GameActivity{
 
     private void runInside()
     {
-        System.out.println("As you run back inside, you hear a loud thud sound coming from the front porch");
-        System.out.println("what should you do");
+        tvStoryText.setText("As you run back inside, you hear a loud thud sound coming from the front porch");
+        tvStoryText.setText("what should you do");
+
         System.out.println("1. Spray at the door \n2. Peek through the windows ");
 
 
@@ -434,8 +442,9 @@ public class GameMichaelAlcantar extends GameActivity{
 
     private void peekWindow()
     {
-        System.out.println("As you look outside, you see the creature running");
-        System.out.println("It runs sraight through the door trumbling you over knocking out your gun");
+        tvStoryText.setText("As you look outside, you see the creature running");
+        tvStoryText.setText("It runs sraight through the door trumbling you over knocking out your gu");
+
         System.out.println("1. RUN \n2. Pick up the gun and fire at it ");
 
 
@@ -451,16 +460,18 @@ public class GameMichaelAlcantar extends GameActivity{
 
     private void pickUpGun()
     {
-        System.out.println("As you run to pick up the gun");
-        System.out.println("You were too slow and the beast hits you in the ribs sending you flying killing you ");
+        tvStoryText.setText("As you run to pick up the gun");
+        tvStoryText.setText("You were too slow and the beast hits you in the ribs sending you flying killing you");
+
 
         defeat();
 
     }
     private void running()
     {
-        System.out.println("As you are running the chases after you ");
-        System.out.println("It runs sraight through the door trumbling you over knocking out your gun");
+        tvStoryText.setText("As you are running the chases after you");
+        tvStoryText.setText("It runs sraight through the door trumbling you over knocking out your gun");
+
         System.out.println("1. RUN \n2. Use the gun in your holster ");
 
         if (choice == 1)
@@ -475,22 +486,25 @@ public class GameMichaelAlcantar extends GameActivity{
 
     private void runAgain()
     {
-
-        System.out.println("As you are being chased the creature chatches up to you");
-        System.out.println("It picks to up and slams you to the ground");
+        tvStoryText.setText("As you are being chased the creature chatches up to you");
+        tvStoryText.setText("It picks to up and slams you to the ground");
 
         defeat();
     }
 
     private void holsterGun()
     {
-        System.out.println("As you use the gun in your holster the bullets seem to do nothing to the creature");
-        System.out.println("The creature tackles and pins you down killing you");
+        tvStoryText.setText("As you use the gun in your holster the bullets seem to do nothing to the creature");
+        tvStoryText.setText("The creature tackles and pins you down killing you");
+
         defeat();
     }
 
     private void sprayGun()
     {
+        tvStoryText.setText("You fire into the door");
+        tvStoryText.setText("");
+
         System.out.println("You fire into the door ");
         System.out.println("You heard a loud groan outside, You might have damaged it ");
         System.out.println("1. Open the door and check  \n2. Stay inside and peek through the windows ");
@@ -509,6 +523,10 @@ public class GameMichaelAlcantar extends GameActivity{
 
     private void openDoor()
     {
+        tvStoryText.setText("");
+        tvStoryText.setText("");
+        tvStoryText.setText("");
+
         System.out.println("You open the door and look at the creature");
         System.out.println("You look at the beats but it tackles you");
         System.out.println("It was faking its injurys");
@@ -519,6 +537,9 @@ public class GameMichaelAlcantar extends GameActivity{
 
     private void windowPeek()
     {
+        tvStoryText.setText("");
+        tvStoryText.setText("");
+
         System.out.println("You peek the window and see the strange  creature on the ground ");
         System.out.println("You see a gas tank next to it");
         System.out.println("1. Fire at the gas tank to harm the creature \n2. Walk outside and check on the crerature");
@@ -536,6 +557,10 @@ public class GameMichaelAlcantar extends GameActivity{
 
     private void pyro()
     {
+        tvStoryText.setText("");
+        tvStoryText.setText("");
+        tvStoryText.setText("");
+
         System.out.println("You fire at the gas canister ");
         System.out.println("The creature screams in pain, fire seems to be its weakness");
         System.out.println("It seems like you killed the strange creature and successfully survive");
