@@ -95,7 +95,6 @@ public class GameMichaelAlcantar extends GameActivity{
     private void cops()
     {
         tvStoryText.setText("You called the cops and said they are on the way, Now you just need to wait")
-        System.out.println("1. Hold the front lines\n2. Hide till help arrives. ");
 
         setAllBtnsVisible();
         btn1.setText("Hold the front lines");
@@ -118,8 +117,6 @@ public class GameMichaelAlcantar extends GameActivity{
     {
 
         tvStoryText.setText("You hide till the police arrives.You later hear gunfire right outside your home, you wanna helpthem but how?");
-
-        System.out.println("1. Fire at the monster with your firearms\n2. Use a loud radio distract it ");
 
         setAllBtnsVisible();
         btn1.setText("Fire ar the monster with your firearm.");
@@ -153,17 +150,10 @@ public class GameMichaelAlcantar extends GameActivity{
     private void fireArms()
     {
 
-        tvStoryText.setText("As the craeture is been weaken by the police");
+        tvStoryText.setText("As the creature is been weaken by the police");
         tvStoryText.setText("You join the fight");
-        tvStoryText.setText("the police threw molotovs at the beast then t");
-        tvStoryText.setText("");
-
-
-
-        System.out.println("As the creature is been weakend by police.");
-        System.out.println("You join the fight ");
-        System.out.println("The police threw molotovs at the beast then thanked you for the assisted");
-        System.out.println("They later recuited you to join the secret war against these demonic beings");
+        tvStoryText.setText("the police threw molotovs at the beast then thanked you for your services");
+        tvStoryText.setText("They later recruited you to join the secret war against these demonic beings");
 
         dub();
     }
@@ -175,22 +165,23 @@ public class GameMichaelAlcantar extends GameActivity{
         tvStoryText.setText("But then the creature jumps you,but before killing you off a helicopter arrives and guns the creature down");
         tvStoryText.setText("One of the men in the helicopter yells fire is it weakness");
 
+        setAllBtnsVisible();
+        btn1.setText("Use the nearby gas canister");
+        btn2.setText("Use your illegal flamethrower");
+        btn3.setVisibility(View.INVISIBLE);
+        btn4.setVisibility(View.INVISIBLE);
 
-        System.out.println("You decide to arm yourself and search for the creature");
-        System.out.println("You check the front door ");
-        System.out.println("But then the creature jumps you,but before killing you off a helicopter arrives and guns the creature down ");
-        System.out.println("One of the men in the helicopter yells fire is it weakness ");
-        System.out.println("1. Use the nearby gas canister\2. Use your illegal flamethrower. ");
 
+        btn1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) { useFire();}
+        });
 
-        if (choice == 1)
-        {
-            useFire();
-        }
-        else if (choice == 2)
-        {
-            useFlamer();
-        }
+        btn2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) { useFlamer();}
+        });
+
     }
 
     private void useFire()
@@ -198,7 +189,6 @@ public class GameMichaelAlcantar extends GameActivity{
         tvStoryText.setText("You throw the canister at the monster");
         tvStoryText.setText("The canister hits the monster and kills it saving you");
         tvStoryText.setText("The cops later tell you not say anything about the monster because its a goverment secret");
-        tvStoryText.setText("");
 
         dub();
     }
@@ -216,20 +206,23 @@ public class GameMichaelAlcantar extends GameActivity{
     {
         tvStoryText.setText("You run to the basement and hide behind somecrates");
         tvStoryText.setText("The animal breaches the basement and looks around ");
-        tvStoryText.setText("");
 
-        System.out.println("1. Stare at the animal\2. cover your head and hold your breath. ");
+        setAllBtnsVisible();
+        btn1.setText("Stare at the animal");
+        btn2.setText("over your head and hold your breath");
+        btn3.setVisibility(View.INVISIBLE);
+        btn4.setVisibility(View.INVISIBLE);
 
+        btn1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(VIEW v) { stare(); }
+        });
 
+        btn2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(VIEW v) { holdBreath(); }
+        });
 
-        if (choice == 1)
-        {
-            stare();
-        }
-        else if (choice == 2)
-        {
-            holdBreath();
-        }
     }
 
     private void holdBreath()
@@ -244,20 +237,23 @@ public class GameMichaelAlcantar extends GameActivity{
     {
         tvStoryText.setText("You stare the the beast");
         tvStoryText.setText("The beast spots you and runs at your direction");
-        tvStoryText.setText("");
 
-        System.out.println("1. Get into cover\2. Jump over the beast and run for it. ");
+        setAllBtnsVisible();
+        btn1.setText("Get into cover");
+        btn2.setText("Jump over the beast and run for it");
+        btn3.setVisibility(View.INVISIBLE);
+        btn4.setVisibility(View.INVISIBLE);
 
+        btn1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(VIEW v) { cover(); }
+        });
 
+        btn2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(VIEW v) { jump(); }
+        });
 
-        if (choice == 1)
-        {
-            cover();
-        }
-        else if (choice == 2)
-        {
-            jump();
-        }
     }
 
     private void cover()
@@ -281,51 +277,63 @@ public class GameMichaelAlcantar extends GameActivity{
 
 
         System.out.println("1. Get a gun then go investigate.\n2. Stay in you room");
+        btn1.setText("Get a gun then go investigate");
+        btn2.setText("Stay in you room");
+        btn3.setVisibility(View.INVISIBLE);
+        btn4.setVisibility(View.INVISIBLE);
 
+        btn1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(VIEW v) { gunInvestigate(); }
+        });
 
-        if (choice == 1)
-        {
-            gunInvestigate();
-        }
-        else if (choice == 2)
-        {
-            stayRoom();
-        }
+        btn2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(VIEW v) { stayRoom(); }
+        });
+
     }
 
     private void stayRoom()
     {
         tvStoryText.setText("As you are freaking out you have two options");
 
-        System.out.println("1. Hide in the room and stay quiet and pray that the creature will go away\n2. Or look for your unregisterd flamethrower you hid from the goverment");
+        btn1.setText("Hide in the room and stay quiet and pray that the creature will go away");
+        btn2.setText("Or look for your unregister flamethrower you hid from the government");
+        btn3.setVisibility(View.INVISIBLE);
+        btn4.setVisibility(View.INVISIBLE);
 
+        btn1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(VIEW v) { hideroom(); }
+        });
 
+        btn2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(VIEW v) { betterPryo(); }
+        });
 
-        if (choice == 1)
-        {
-            hideroom();
-        }
-        else if (choice == 2)
-        {
-            betterPryo();
-        }
     }
 
     private void hideroom()
     {
         tvStoryText.setText("As you are searching for way to hide, you have two chooses");
 
-        System.out.println("1. Under the bed\n2. Closet");
+        btn1.setText("Under the bed");
+        btn2.setText("Closet");
+        btn3.setVisibility(View.INVISIBLE);
+        btn4.setVisibility(View.INVISIBLE);
 
+        btn1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(VIEW v) { hidebed(); }
+        });
 
-        if (choice == 1)
-        {
-            hidebed();
-        }
-        else if (choice == 2)
-        {
-            closet();
-        }
+        btn2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(VIEW v) { closet(); }
+        });
+
     }
 
     private void closet()
@@ -350,17 +358,21 @@ public class GameMichaelAlcantar extends GameActivity{
         tvStoryText.setText("As you walk towards the front door exited to use the flamethrower");
         tvStoryText.setText("The beast brustes into the front door");
 
-        System.out.println("1. Use the flamethrower\n2. RUN AS FAST AS YOU CAN");
+        btn1.setText("Use the flamethrower");
+        btn2.setText("RUN AS FAST AS YOU CAN");
+        btn3.setVisibility(View.INVISIBLE);
+        btn4.setVisibility(View.INVISIBLE);
 
+        btn1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(VIEW v) { burn(); }
+        });
 
-        if (choice == 1)
-        {
-            burn();
-        }
-        else if (choice == 2)
-        {
-            freeze();
-        }
+        btn2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(VIEW v) { freeze(); }
+        });
+
 
     }
     private void freeze()
@@ -382,16 +394,17 @@ public class GameMichaelAlcantar extends GameActivity{
     private void gunInvestigate()
     {
         tvStoryText.setText("You are about to leave the cabin but you hear a loud terrifying screech");
+        tvStoryText.setText("RAEEETETETE!");
 
-        System.out.println(TextColor.RED + " RAEEETETETETE!" + TextColor.RESET);
-        System.out.println("1. Choose to still go out side\n2. Remain inside");
+        btn1.setText("Choose to still go out side");
+        btn2.setVisibility(View.INVISIBLE);
+        btn3.setVisibility(View.INVISIBLE);
+        btn4.setVisibility(View.INVISIBLE);
 
-
-
-        if (choice == 1)
-        {
-            gunOutside();
-        }
+        btn1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(VIEW v) { gunOutside(); }
+        });
     }
 
 
@@ -399,17 +412,22 @@ public class GameMichaelAlcantar extends GameActivity{
     {
         tvStoryText.setText("You run outside aiming your gun and see nothing, you look cautiously but see nothing. As you look into the distance you see 2 red dots coming torwards you");
 
-        System.out.println("1. Fire your gun at it \n2. RUN INSIDE");
+        btn1.setText("Fire your gun at it");
+        btn2.setText("RUN INSIDE");
+        btn3.setVisibility(View.INVISIBLE);
+        btn4.setVisibility(View.INVISIBLE);
+
+        btn1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(VIEW v) { fireGun(); }
+        });
+
+        btn2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(VIEW v) { runInside(); }
+        });
 
 
-        if (choice == 1 )
-        {
-            fireGun();
-        }
-        else if (choice == 2)
-        {
-            runInside();
-        }
     }
 
     private void fireGun()
@@ -429,15 +447,21 @@ public class GameMichaelAlcantar extends GameActivity{
 
         System.out.println("1. Spray at the door \n2. Peek through the windows ");
 
+        btn1.setText("Spray at the door");
+        btn2.setText("Peek through the windows");
+        btn3.setVisibility(View.INVISIBLE);
+        btn4.setVisibility(View.INVISIBLE);
 
-        if (choice == 1)
-        {
-            sprayGun();
-        }
-        else if (choice == 2)
-        {
-            peekWindow();
-        }
+        btn1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(VIEW v) { sprayGun(); }
+        });
+
+        btn2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(VIEW v) { peekWindow(); }
+        });
+
     }
 
     private void peekWindow()
@@ -445,7 +469,20 @@ public class GameMichaelAlcantar extends GameActivity{
         tvStoryText.setText("As you look outside, you see the creature running");
         tvStoryText.setText("It runs sraight through the door trumbling you over knocking out your gu");
 
-        System.out.println("1. RUN \n2. Pick up the gun and fire at it ");
+        btn1.setText("RUN");
+        btn2.setText("Pick up the gun and fire at it");
+        btn3.setVisibility(View.INVISIBLE);
+        btn4.setVisibility(View.INVISIBLE);
+
+        btn1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(VIEW v) { running(); }
+        });
+
+        btn2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(VIEW v) { pickingUpGun(); }
+        });
 
 
         if (choice == 1)
@@ -472,7 +509,10 @@ public class GameMichaelAlcantar extends GameActivity{
         tvStoryText.setText("As you are running the chases after you");
         tvStoryText.setText("It runs sraight through the door trumbling you over knocking out your gun");
 
-        System.out.println("1. RUN \n2. Use the gun in your holster ");
+        btn1.setText("RUN");
+        btn2.setText("Use the gun in your holster");
+        btn3.setVisibility(View.INVISIBLE);
+        btn4.setVisibility(View.INVISIBLE);
 
         if (choice == 1)
         {
@@ -503,11 +543,12 @@ public class GameMichaelAlcantar extends GameActivity{
     private void sprayGun()
     {
         tvStoryText.setText("You fire into the door");
-        tvStoryText.setText("");
+        tvStoryText.setText("You heard a loud groan outside, You might have damaged it");
 
-        System.out.println("You fire into the door ");
-        System.out.println("You heard a loud groan outside, You might have damaged it ");
-        System.out.println("1. Open the door and check  \n2. Stay inside and peek through the windows ");
+        btn1.setText("Open the door and check");
+        btn2.setText("Stay inside and peek through the windows");
+        btn3.setVisibility(View.INVISIBLE);
+        btn4.setVisibility(View.INVISIBLE);
 
 
         if (choice == 1)
@@ -523,13 +564,9 @@ public class GameMichaelAlcantar extends GameActivity{
 
     private void openDoor()
     {
-        tvStoryText.setText("");
-        tvStoryText.setText("");
-        tvStoryText.setText("");
-
-        System.out.println("You open the door and look at the creature");
-        System.out.println("You look at the beats but it tackles you");
-        System.out.println("It was faking its injurys");
+        tvStoryText.setText("You open the door and look at the creature");
+        tvStoryText.setText("You look at the beats but it tackles you");
+        tvStoryText.setText("It was faking its injury");
 
         defeat();
 
@@ -537,12 +574,14 @@ public class GameMichaelAlcantar extends GameActivity{
 
     private void windowPeek()
     {
-        tvStoryText.setText("");
-        tvStoryText.setText("");
+        tvStoryText.setText("You peek the window and see the strange creature on the ground");
+        tvStoryText.setText("You see a gas tank next to it");
 
-        System.out.println("You peek the window and see the strange  creature on the ground ");
-        System.out.println("You see a gas tank next to it");
-        System.out.println("1. Fire at the gas tank to harm the creature \n2. Walk outside and check on the crerature");
+        btn1.setText("Fire at the gas tank to harm the creature");
+        btn2.setText("Walk outside and check on the creature");
+        btn3.setVisibility(View.INVISIBLE);
+        btn4.setVisibility(View.INVISIBLE);
+
 
 
         if (choice == 1)
@@ -557,13 +596,9 @@ public class GameMichaelAlcantar extends GameActivity{
 
     private void pyro()
     {
-        tvStoryText.setText("");
-        tvStoryText.setText("");
-        tvStoryText.setText("");
-
-        System.out.println("You fire at the gas canister ");
-        System.out.println("The creature screams in pain, fire seems to be its weakness");
-        System.out.println("It seems like you killed the strange creature and successfully survive");
+        tvStoryText.setText("You fire at the gas canister ");
+        tvStoryText.setText("The creature screams in pain, fire seems to be its weakness");
+        tvStoryText.setText("It seems like you killed the strange creature and successfully survive");
 
         dub();
     }
