@@ -64,6 +64,7 @@ public class GameMichaelAlcantar extends GameActivity{
 
     private void start()
     {
+        ivStory.setImageResource(R.drawable.cabin_in_the_woods);
         isWon = false;
 
         tvStoryText.setText("What would you do?");
@@ -94,6 +95,8 @@ public class GameMichaelAlcantar extends GameActivity{
 
     private void cops()
     {
+        ivStory.setImageResource(R.drawable.looking_down_to_a_phone);
+
         tvStoryText.setText("You called the cops and said they are on the way, Now you just need to wait")
 
         setAllBtnsVisible();
@@ -115,7 +118,7 @@ public class GameMichaelAlcantar extends GameActivity{
 
     private void help()
     {
-
+        ivStory.setImageResource(R.drawable.hiding_in_the_basement);
         tvStoryText.setText("You hide till the police arrives.You later hear gunfire right outside your home, you wanna helpthem but how?");
 
         setAllBtnsVisible();
@@ -138,6 +141,8 @@ public class GameMichaelAlcantar extends GameActivity{
 
     private void radio()
     {
+        ivStory.setImageResource(R.drawable.using_loud_music_to_distracted_a_wendigo_to_protect_the_police);
+
         tvStoryText.setText("You managed to distract the monster but all of its focused is on you now");
         tvStoryText.setText("The beast has found its way to you ad threw you out of the window injuring you");
         tvStoryText.setText("The police force is there to help you get back up but later flee from the monster");
@@ -483,16 +488,6 @@ public class GameMichaelAlcantar extends GameActivity{
             @Override
             public void onClick(VIEW v) { pickingUpGun(); }
         });
-
-
-        if (choice == 1)
-        {
-            running();
-        }
-        else if (choice == 2)
-        {
-            pickUpGun();
-        }
     }
 
     private void pickUpGun()
@@ -514,14 +509,16 @@ public class GameMichaelAlcantar extends GameActivity{
         btn3.setVisibility(View.INVISIBLE);
         btn4.setVisibility(View.INVISIBLE);
 
-        if (choice == 1)
-        {
-            runAgain();
-        }
-        else if (choice == 2)
-        {
-            holsterGun();
-        }
+        btn1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(VIEW v) { runagain(); }
+        });
+
+        btn2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(VIEW v) { holsterGun(); }
+        });
+
     }
 
     private void runAgain()
@@ -550,15 +547,16 @@ public class GameMichaelAlcantar extends GameActivity{
         btn3.setVisibility(View.INVISIBLE);
         btn4.setVisibility(View.INVISIBLE);
 
+        btn1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(VIEW v) { openDoor(); }
+        });
 
-        if (choice == 1)
-        {
-            openDoor();
-        }
-        else if (choice == 2)
-        {
-            windowPeek();
-        }
+        btn2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(VIEW v) { windowPeek(); }
+        });
+
 
     }
 
@@ -582,16 +580,16 @@ public class GameMichaelAlcantar extends GameActivity{
         btn3.setVisibility(View.INVISIBLE);
         btn4.setVisibility(View.INVISIBLE);
 
+        btn1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(VIEW v) { pryo(); }
+        });
 
+        btn2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(VIEW v) { defeat(); }
+        });
 
-        if (choice == 1)
-        {
-            pyro();
-        }
-        else if (choice == 2)
-        {
-            defeat();
-        }
     }
 
     private void pyro()
